@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Nunito&family=PT+Sans:ital@1&display=swap");
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+* ::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 15px;
+}
+* ::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 15px;
+}
+* ::webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+html {
+  height: 100vh;
+  background-size: 400% 400%;
+  background-image: linear-gradient(-45deg, #e04e22, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: bganimation 20000ms ease-in-out infinite alternate;
+}
+
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #2A2B2A;
+  backdrop-filter: blur(20px);
+  width: 35%;
+  height: 500px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 3px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  font-family: "Nunito", sans-serif;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 100px;
+}
+.form-container form label {
+  font-size: 20px;
+  color: #EDEAD0;
+  text-shadow: 1px 1px #000;
+}
+.form-container form .input-data {
+  border-radius: 10px;
+  border: 0;
+  padding: 6px;
+  box-shadow: 1px 1px 4px #000;
+}
+.form-container form .input-data:focus {
+  outline: none;
+  border: 1px solid #F75C03;
+}
+.form-container form .buttom-insert {
+  padding: 8px;
+  border-radius: 10px;
+  border: 0;
+  transition: 300ms;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 500;
+}
+.form-container form .buttom-insert:hover {
+  background-color: #08B2E3;
+}
+.form-container form .buttom-insert:active {
+  background-color: #04A777;
+}
+
+.data-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 300px;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: #161616;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 5px 15px 15px;
+  background-color: #EDEAD0;
+  justify-content: space-evenly;
+  margin-bottom: 2px;
+  border-radius: 10px;
+}
+.data label {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.data div :nth-child(1):hover {
+  background-color: #04A777;
+}
+.data div :nth-child(2):hover {
+  background-color: #FF4000;
+}
+.data div input {
+  padding: 10px;
+  border: 1px #2A2B2A solid;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: 300ms;
+}
+
+.completa {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+.completa label {
+  transition: 300ms;
+}
+
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.toggle-container p {
+  color: #EDEAD0;
+  text-shadow: 1px 1px #000;
+}
+.toggle-container .switch-container {
+  margin: 0 20px;
+  text-indent: -9999px;
+  width: 60px;
+  height: 30px;
+  background: #EDEAD0;
+  display: block;
+  border-radius: 15px;
+  position: relative;
+}
+.toggle-container .switch-container .switch {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.toggle-container .switch-container label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 25px;
+  height: 25px;
+  background: #F75C03;
+  border-radius: 90px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.toggle-container .switch-container .switch:checked + label {
+  background: #08B2E3;
+}
+.toggle-container .switch-container .switch:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background: #08B2E3;
+}
+.toggle-container .switch-container label:active:after {
+  width: 60px;
+}
+
+/*# sourceMappingURL=index.css.map */
